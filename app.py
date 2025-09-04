@@ -88,9 +88,9 @@ def main():
             # --- THIS IS THE CORRECTED LOGIC ---
             # Now, both outcomes will display the churn probability for consistency.
             if prediction == 1:
-                st.warning(f"⚠️ Prediction: Customer is likely to STAY (Churn Probability: {churn_probability*100:.2f}%)")
+                st.warning(f"⚠️ Prediction: Customer is likely to CHURN (Churn Probability: {churn_probability*100:.2f}%)")
             else:
-                st.success(f"✅ Prediction: Customer is likely to CHURN (Churn Probability: {churn_probability*100:.2f}%)")
+                st.success(f"✅ Prediction: Customer is likely to STAY (Churn Probability: {churn_probability*100:.2f}%)")
                 
             # The progress bar always shows the churn probability (risk score)
             st.progress(churn_probability)
