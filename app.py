@@ -10,6 +10,33 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(135deg, #41295a, #2F0743);
+        color: #f5f5f5;
+    }
+
+    h1, h2 {
+        color: #ffccff;
+    }
+
+    section[data-testid="stSidebar"] {
+        background: rgba(0,0,0,0.4);
+    }
+
+    .stButton > button {
+        background: linear-gradient(90deg, #ff758c, #ff7eb3);
+        color: black;
+        border-radius: 12px;
+        font-weight: bold;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # --- Load Model ---
 try:
