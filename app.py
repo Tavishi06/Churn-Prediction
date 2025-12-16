@@ -10,61 +10,78 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+# ─────────────────────────────────────────────────────────────
+# PREMIUM AESTHETIC THEME (Soft Sage + Midnight)
+# ─────────────────────────────────────────────────────────────
+
 st.markdown(
     """
     <style>
-    /* Main app background */
+
+    /* Main background */
     .stApp {
-        background: linear-gradient(135deg, #1F1026, #3A1C40);
-        color: #FFF1F8;
+        background: linear-gradient(135deg, #0F172A, #1E293B);
+        color: #E5E7EB;
     }
 
     /* Sidebar */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1A0D22, #2C1435);
+        background: linear-gradient(180deg, #020617, #0F172A);
+        border-right: 1px solid rgba(255,255,255,0.08);
     }
 
-    /* Text */
-    h1, h2, h3, h4, h5, h6, p, span, label {
-        color: #FFF1F8 !important;
+    /* Headers */
+    h1, h2, h3, h4, h5 {
+        color: #F8FAFC !important;
+        font-weight: 600;
     }
 
-    /* Input boxes */
-    input, textarea {
-        background-color: rgba(255, 255, 255, 0.08) !important;
-        color: #FFF1F8 !important;
-        border-radius: 10px;
-        border: 1px solid rgba(255,255,255,0.2);
+    /* Paragraphs & labels */
+    p, span, label {
+        color: #CBD5E1 !important;
+        font-size: 15px;
+    }
+
+    /* Inputs */
+    input, textarea, select {
+        background: rgba(255,255,255,0.06) !important;
+        color: #F1F5F9 !important;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.15);
+        padding: 10px;
+    }
+
+    /* Radio & checkbox */
+    .stRadio label, .stCheckbox label {
+        color: #E5E7EB !important;
+        font-size: 15px;
     }
 
     /* Buttons */
     button {
-        background: linear-gradient(135deg, #EC4899, #F472B6) !important;
-        color: white !important;
-        border-radius: 12px !important;
+        background: linear-gradient(135deg, #38BDF8, #0EA5E9) !important;
+        color: #020617 !important;
+        border-radius: 14px !important;
         border: none !important;
-        padding: 0.6em 1.2em !important;
+        padding: 0.6em 1.4em !important;
         font-weight: 600 !important;
     }
 
     button:hover {
-        background: linear-gradient(135deg, #F472B6, #EC4899) !important;
-        transform: scale(1.02);
+        background: linear-gradient(135deg, #0EA5E9, #38BDF8) !important;
+        transform: translateY(-1px);
     }
 
-    /* Cards / containers */
+    /* Cards */
     div[data-testid="stMetric"],
-    div[data-testid="stContainer"] {
-        background: rgba(255, 255, 255, 0.07);
-        border-radius: 16px;
-        padding: 15px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    div[data-testid="stContainer"],
+    .element-container {
+        background: rgba(255,255,255,0.07);
+        border-radius: 18px;
+        padding: 16px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
     }
 
-    /* Radio & checkbox text */
-    .stRadio label, .stCheckbox label {
-        color: #F5A9C4 !important;
-    }
     </style>
     """,
     unsafe_allow_html=True
