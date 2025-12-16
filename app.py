@@ -13,59 +13,58 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* MAIN BACKGROUND */
+    /* Main app background */
     .stApp {
-        background: linear-gradient(135deg, #0f3443, #34e89e);
-        color: #ffffff;
+        background: linear-gradient(135deg, #1F1026, #3A1C40);
+        color: #FFF1F8;
     }
 
-    /* SIDEBAR */
+    /* Sidebar */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1e3c72, #2a5298);
-        color: white;
+        background: linear-gradient(180deg, #1A0D22, #2C1435);
     }
 
-    /* SIDEBAR TEXT */
-    section[data-testid="stSidebar"] * {
-        color: white !important;
-        font-weight: 500;
+    /* Text */
+    h1, h2, h3, h4, h5, h6, p, span, label {
+        color: #FFF1F8 !important;
     }
 
-    /* RADIO BUTTON LABELS (FIXES INVISIBLE ISSUE) */
-    div[role="radiogroup"] label {
-        color: white !important;
-        font-size: 16px;
-    }
-
-    /* HEADINGS */
-    h1, h2, h3 {
-        color: #ffffff;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-
-    /* BUTTONS */
-    .stButton > button {
-        background: linear-gradient(90deg, #ff9800, #ff5722);
-        color: white;
-        border-radius: 12px;
-        border: none;
-        font-weight: bold;
-        padding: 8px 20px;
-    }
-
-    /* INPUT BOXES */
-    input, textarea, select {
-        background-color: rgba(255,255,255,0.15) !important;
-        color: white !important;
+    /* Input boxes */
+    input, textarea {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        color: #FFF1F8 !important;
         border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.2);
     }
 
-    /* TABLE */
-    .stDataFrame {
-        background: rgba(0,0,0,0.25);
-        border-radius: 12px;
+    /* Buttons */
+    button {
+        background: linear-gradient(135deg, #EC4899, #F472B6) !important;
+        color: white !important;
+        border-radius: 12px !important;
+        border: none !important;
+        padding: 0.6em 1.2em !important;
+        font-weight: 600 !important;
     }
 
+    button:hover {
+        background: linear-gradient(135deg, #F472B6, #EC4899) !important;
+        transform: scale(1.02);
+    }
+
+    /* Cards / containers */
+    div[data-testid="stMetric"],
+    div[data-testid="stContainer"] {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 16px;
+        padding: 15px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Radio & checkbox text */
+    .stRadio label, .stCheckbox label {
+        color: #F5A9C4 !important;
+    }
     </style>
     """,
     unsafe_allow_html=True
