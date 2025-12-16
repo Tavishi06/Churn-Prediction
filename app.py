@@ -13,30 +13,63 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* MAIN BACKGROUND */
     .stApp {
-        background: linear-gradient(135deg, #41295a, #2F0743);
-        color: #f5f5f5;
+        background: linear-gradient(135deg, #0f3443, #34e89e);
+        color: #ffffff;
     }
 
-    h1, h2 {
-        color: #ffccff;
-    }
-
+    /* SIDEBAR */
     section[data-testid="stSidebar"] {
-        background: rgba(0,0,0,0.4);
+        background: linear-gradient(180deg, #1e3c72, #2a5298);
+        color: white;
     }
 
-    .stButton > button {
-        background: linear-gradient(90deg, #ff758c, #ff7eb3);
-        color: black;
-        border-radius: 12px;
-        font-weight: bold;
+    /* SIDEBAR TEXT */
+    section[data-testid="stSidebar"] * {
+        color: white !important;
+        font-weight: 500;
     }
+
+    /* RADIO BUTTON LABELS (FIXES INVISIBLE ISSUE) */
+    div[role="radiogroup"] label {
+        color: white !important;
+        font-size: 16px;
+    }
+
+    /* HEADINGS */
+    h1, h2, h3 {
+        color: #ffffff;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+
+    /* BUTTONS */
+    .stButton > button {
+        background: linear-gradient(90deg, #ff9800, #ff5722);
+        color: white;
+        border-radius: 12px;
+        border: none;
+        font-weight: bold;
+        padding: 8px 20px;
+    }
+
+    /* INPUT BOXES */
+    input, textarea, select {
+        background-color: rgba(255,255,255,0.15) !important;
+        color: white !important;
+        border-radius: 10px;
+    }
+
+    /* TABLE */
+    .stDataFrame {
+        background: rgba(0,0,0,0.25);
+        border-radius: 12px;
+    }
+
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 
 # --- Load Model ---
